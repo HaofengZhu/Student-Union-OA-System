@@ -7,8 +7,8 @@ class UserManager:
         self.__islogin=False
         self.MsgManager=MsgManager()
         pass
-    #登陆，返回是否成功
-    def login(self,sid,pw):
+    #登陆，返回数据库的id，登陆失败返回""
+    def login(self,userName,password):
 
         pass
     #是否登陆
