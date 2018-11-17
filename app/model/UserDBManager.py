@@ -1,4 +1,6 @@
-class UserDBManger:
+from app.model.DBManager import DBManager
+
+class UserDBManager(DBManager):
     def __init__(self):
         pass
 

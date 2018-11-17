@@ -1,4 +1,8 @@
-class MsgManger:
+from app.model.MsgDBManager import MsgDBManager
+
+class MsgManager:
+    __MsgDB=MsgDBManager()
+
     def __init__(self):
         pass
 

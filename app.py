@@ -1,10 +1,10 @@
 from flask import Flask,render_template,request
-from app.server import MsgManager,UserManger
 from config import config
-
+from app.model import DBManager
 app = Flask(__name__)
 app.config.from_object(config['development'])
-
+#需要再config中设置db路径和密码
+DBManager.setDatabase(app.config["DATABASE_URI"],app.config["DATABASE_PASSWORD"])
 #主页面
 @app.route('/')
 def home():
@@ -13,9 +13,11 @@ def home():
 @app.route('/login')
 def post_login():
     pass
+
 #发送注册请求
 @app.route('/register')
 def post_register():
+
     pass
 #发送申请请求
 @app.route('/post_submit')
