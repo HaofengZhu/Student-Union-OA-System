@@ -1,10 +1,10 @@
 from flask import Flask,render_template,request
 from config import config
-from app.model import DBManager
+from app.model.DBSubmitter import DBinfo
 app = Flask(__name__)
 app.config.from_object(config['development'])
 #需要再config中设置db路径和密码
-DBManager.setDatabase(app.config["DATABASE_URI"],app.config["DATABASE_PASSWORD"])
+DBinfo.setDatabase(app.config["DATABASE_URI"],app.config["DATABASE_PASSWORD"])
 #主页面
 @app.route('/')
 def home():

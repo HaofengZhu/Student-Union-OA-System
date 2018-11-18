@@ -8,3 +8,7 @@ class DBManager:
     def setDatabase(cls,ip,pw):
         cls.__DBIP=ip
         cls.__DBpw=pw
+
+    @classmethod
+    def query(cls,sql_query):
+        pass

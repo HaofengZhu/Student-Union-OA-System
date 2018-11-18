@@ -1,9 +1,9 @@
 from app.model.DBManager import DBManager
 
-class MsgDBManager(DBManager):
+class DBSubmitter:
     def __init__(self):
         pass
 
-    def addMsg(self):
+    @classmethod
+    def submit(cls,msg):
         pass
-

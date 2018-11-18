@@ -4,8 +4,15 @@ class UserDBManager(DBManager):
     def __init__(self):
         pass
 
-    def checkLogin(self,sID,pw):
+    @classmethod
+    def checkLogin(cls,sID,pw):
         pass
 
-    def addUser(self):
+    @classmethod
+    def addUser(cls,register_form):
         pass
+
+    @classmethod
+    def revise_user_info(cls,revise_form):
+        pass
+
